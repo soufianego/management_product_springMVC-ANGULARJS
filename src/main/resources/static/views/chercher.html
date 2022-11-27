@@ -1,0 +1,42 @@
+<head>
+<meta charset="utf-8">
+</head>
+<div class="container">
+Mot Clé : <input type="text" ng-model="motCle"/>
+<button ng-click="chercherProduits()">Charger</button>
+
+</div>
+
+<div class="container">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>IDD</th><th>Désignation</th><th>Prix</th><th>Quantité</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="p in pageProduits.content">
+<td>{{p.id}}</td>
+<td>{{p.designation}}</td>
+<td>{{p.prix}}</td>
+<td>{{p.quantite}}</td>
+
+<td><a class="nav-link "  ng-click="delete(p.id)">delete</a> </td>
+ <td><a ui-sref="about">About</a></td>
+<!-- 
+<td> <a onclick="return confirm('Ets vous sure de supprimer ?')" th:href=
+  "@{delete(id=${p.id},page=${pageCourante},size=${size},mc=${mc})}">Delete</a></td>
+ -->
+
+  
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<ul class="nav nav-pills">
+<li class="nav-item clickable" ng-class="{'nav-link active':$index==pageCourante}"  ng-repeat="p in pages track by $index" >
+<a class="nav-link "  ng-click="gotoPage($index)">{{$index}}</a>
+</li>
+</ul>
+</div>

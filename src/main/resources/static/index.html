@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>Catalogue</title>
+<link rel="stylesheet" type="text/css" 
+href="css/bootstrap.min.css"
+></link>
+<link rel="stylesheet" type="text/css" 
+href="css/myStyle.css"
+></link>
+</head>
+<body ng-app="MyApp" style="background-color:	hsl(180,100%,50%);">
+
+
+<script  type="text/javascript" src="js/js1.js"></script>
+<script  type="text/javascript" src="js/js2.js"></script>
+<script  type="text/javascript" src="js/js3.js"></script>
+
+
+<a href="#" onclick="window.open('c:\\test.txt')">Click ici</a>
+
+<div class="navbar navbar-default">
+<div class="container-fluid">
+<ul class="nav navbar-nav">
+<li><a ui-sref="home">Home</a></li>
+ <li><a ui-sref="chercher">Chercher</a></li>
+ <li><a ui-sref="newProduit">Nouveau Produitt</a></li>
+</ul>
+</div>
+</div>
+
+
+  
+  
+<ui-view></ui-view>
+
+
+
+ <script  type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+ <script  type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script  type="text/javascript" src="js/app2.js"></script>
+
+
+
+
+
+</body>
+</html>
